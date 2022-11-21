@@ -42,4 +42,61 @@ const siteContent = { // BU NESNEYİ DEĞİŞTİRMEYİN
 console.log('Proje açıldı!')
 
 
+
 /* Kodlar Buradan aşağıya */
+
+const navigationItems =document.querySelectorAll("nav a")
+navigationItems[0].textContent=siteContent["nav"]["nav-item-1"]
+// navigationItems[0].setAttribute("class","italic")
+// navigationItems[1].textContent=siteContent["nav"]["nav-item-2"]
+// navigationItems[1].setAttribute("class","italic")
+// navigationItems[2].textContent=siteContent["nav"]["nav-item-3"]
+// navigationItems[2].setAttribute("class","italic")
+// navigationItems[3].textContent=siteContent["nav"]["nav-item-4"]
+// navigationItems[3].setAttribute("class","italic")
+// navigationItems[4].textContent=siteContent["nav"]["nav-item-5"]
+// navigationItems[4].setAttribute("class","italic")
+// navigationItems[5].textContent=siteContent["nav"]["nav-item-6"]
+// navigationItems[5].setAttribute("class","italic")
+for (let i=0;i<navigationItems.length;i++)
+{
+  var sira=i+1
+  navigationItems[i].textContent=siteContent["nav"]["nav-item-"+sira]
+  navigationItems[i].setAttribute("class","italic")
+}
+const logoImage=document.getElementById("logo-img")
+logoImage.src=siteContent["images"]["logo-img"]
+
+ 
+var mainText=document.querySelector[".cta-text"];
+mainText.querySelector["h1"].textContent=siteContent["cta"]["h1"]
+mainText.querySelector["button"].textContent=siteContent["cta"]["button"]
+
+// document.getElementById("cta-img").setAttribute('src',siteContent.images["cta-img"])
+document.getElementById("cta-img").src=siteContent.images["cta-img"]
+
+document.querySelectorAll(".main-content.top-content.text-content h4")[0].textContent=siteContent["ana-içerik"]["özellikler-h4"]
+document.querySelectorAll(".main-content.top-content.text-content h4")[1].textContent=siteContent["ana-içerik"]["hakkımızda-h4"]
+document.querySelectorAll(".main-content.top-content.text-content p")[0].textContent=siteContent["ana-içerik"]["özellikler-içerik"]
+document.querySelectorAll(".main-content.top-content.text-content p")[1].textContent=siteContent["ana-içerik"]["hakkımızda-içerik"]
+
+const image2 =document.querySelector("#middle-img")
+image2.setAttribute("src", siteContent.images["accent-img"])
+
+document.querySelectorAll(".bottom-content .text-content h4")[0].textContent = siteContent["ana-içerik"]["servisler-h4"]
+document.querySelectorAll(".bottom-content .text-content p")[0].textContent = siteContent["ana-içerik"]["servisler-içeriği"]
+
+document.querySelectorAll(".bottom-content .text-content h4")[1].textContent = siteContent["ana-içerik"]["ürünler-h4"]
+document.querySelectorAll(".bottom-content .text-content p")[1].textContent = siteContent["ana-içerik"]["ürünler-içeriği"]
+
+document.querySelectorAll(".bottom-content .text-content h4")[2].textContent = siteContent["ana-içerik"]["vizyon-h4"]
+document.querySelectorAll(".bottom-content .text-content p")[2].textContent = siteContent["ana-içerik"]["vizyon-içeriği"]
+
+document.querySelectorAll(".contact h4")[0].textContent = siteContent.iletisim["iletişim-h4"]
+document.querySelectorAll(".contact p")[0].textContent = siteContent.iletisim.adres
+document.querySelectorAll(".contact p")[1].textContent = siteContent.iletisim.telefon
+document.querySelectorAll(".contact p")[2].textContent = siteContent.iletisim.email
+
+const footerText =document.querySelector("footer a")
+footerText.classList.add("bold")
+footerText.textContent=siteContent.footer.copyright
